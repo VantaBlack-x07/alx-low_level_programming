@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
-* main - entry point
-*
-* Description: function that prints the alphabet,
-* in lowercase, followed by a new line.
-*
-* Return: 0 (success)
-*
+ * main - entry point
+ *
+ * Description: function that prints the alphabet, in lowercase
+ *
+ * Return: 0 (success)
+ *
 */
 
 void print_alphabet(void)
@@ -17,5 +16,4 @@ void print_alphabet(void)
 	for (ch = 'a'; ch <= 'z'; ch++)
 		_putchar(ch);
 	_putchar('\n');
-
 }
