@@ -1,12 +1,8 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Description: function that prints the alphabet, in lowercase
- *
- * Return: 0 (success)
- *
+* print_alphabet - utilizes on the _putchar function to print
+*			the alphabet a - z
 */
 
 void print_alphabet(void)
