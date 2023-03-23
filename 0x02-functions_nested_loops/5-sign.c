@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
 * print_sign - print + if n is grater than zero
