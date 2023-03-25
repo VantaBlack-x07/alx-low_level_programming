@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* print_numbers - function that prints the numbers,
-* from 0 to 9, followed by a new line
+* print_numbers - print 0 - 9
+* only using _putchar twice
 *
 * Return: Always 0 (success)
 *
