@@ -11,7 +11,7 @@
 
 int main(int argc, char const *argv[])
 {
-	int x;
+	int x = 0;
 
 	while (argc--)
 	{
