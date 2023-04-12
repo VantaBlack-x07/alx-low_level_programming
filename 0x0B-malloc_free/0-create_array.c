@@ -5,7 +5,7 @@
 /**
  * create_array - function that creates an array of chars
  * and initializes it with a specific char.
- * 
+ *
  * @c: the address of memory to print
  * @size: the size of the memory to print
  *
@@ -14,7 +14,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char* x = malloc(size);
+	char *x = malloc(size);
 
 	if (size == 0 || x == 0)
 		return (0);
