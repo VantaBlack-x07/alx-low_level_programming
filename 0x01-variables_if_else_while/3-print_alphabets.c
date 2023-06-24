@@ -11,7 +11,7 @@
 */
 
 int main(void)
-}
+{
 	int x, y;
 
 	for (x = 97; x <= 122; x++)
@@ -24,4 +24,4 @@ int main(void)
 }
 	putchar('\n');
 	return (0);
-{
+}
