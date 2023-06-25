@@ -9,9 +9,9 @@
 *
 */
 
-int _putchar(void)
+int _putchar(char c)
 {
-	_putchar(_putchar);
+	_putchar("_putchar");
 
 	return (0);
 }
