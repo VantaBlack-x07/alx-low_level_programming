@@ -16,15 +16,15 @@ int main(void)
 
 	for (x = 48; x <= 57; x++)
 {
-		for (y = 48; y <= 57; y++)
+		for (y = i + 1; y <= 57; y++)
 	{
-			if (x != y)
-		{
 			putchar(x);
 			putchar(y);
+		if (x !=9 && y != 9)
+	{
 			putchar(',');
 			putchar(' ');
-		}
+	}
 	}
 }
 	putchar('\n');
