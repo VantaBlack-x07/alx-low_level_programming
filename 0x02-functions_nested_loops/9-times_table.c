@@ -9,12 +9,12 @@ void times_table(void)
 {
 	int x, y;
 
-	for (x = 0; x <= 10; x++)
+	for (x = 0; x <= 9; x++)
 	{
-		for (y = 0; y <= 10; y++)
+		for (y = 0; y <= 9; y++)
 		{
 			printf("%2d, ", x * y);
 		}
-		printf("\n");
-	}
+	printf("\n");
+		}
 }
