@@ -14,7 +14,7 @@ void print_to_98(int n)
 {
 	if (n == 0 || n < 0)
 	{
-		n = 1
+		n = 1;
 	}
 	for (; n <= 98; n++)
 	{
