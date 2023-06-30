@@ -17,8 +17,8 @@ char y;
 
 for (x = len / 2; x < len; x++)
 {
-	y = str[len - 1 - x];
+	y = str[x];
 	_putchar(y);
 }
-
+_putchar('\n');
 }
