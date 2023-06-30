@@ -17,7 +17,7 @@ int _strlen(char *s)
 	{
 		if (s[i] != '\0')
 		{
-			c++
+			c++;
 		}
 	}
 
