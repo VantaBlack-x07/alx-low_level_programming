@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* print_every_other_char - function that prints every other character
+* puts2 - function that prints every other character
 *
 * @str: is the parameter
 */
 
-void print_every_other_char(char *str) {
+void puts(char *str) {
 	int i = 0;
 	
 	while (str[i] != '\0') {
