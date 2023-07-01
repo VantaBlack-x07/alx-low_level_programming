@@ -8,15 +8,17 @@
 *
 * Return: alwaysreturn char.
 */
-
 char *_strcpy(char *dest, char *src)
 {
-int x, y = strlen(src);
+	char *dest_ptr = dest;
 
-for (x = 0; x <= y; x++)
-{
-	dest[x] = src[x];
-}
-printf("\n");
-return (dest);
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+
+	return (dest_ptr);
 }
