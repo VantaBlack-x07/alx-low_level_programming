@@ -13,9 +13,13 @@ void print_array(int *a, int n)
 {
 int x;
 
-for (x = 0; x < n; x++)
+for (x = 0; x < n - 1; x++)
 {
-	printf("%i, ", a[x]);
+	printf("%i", a[x]);
+	if (a[x] != '\0')
+	{
+	printf(", ");
+	}
 }
 _putchar('\n');
 }
