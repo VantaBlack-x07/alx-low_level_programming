@@ -15,7 +15,7 @@ int x;
 
 for (x = 0; x < src[x]; x++)
 {
-	dest[x] = src[x]
+	dest[x] = src[x];
 }
 printf("\n");
 return (dest);
