@@ -16,7 +16,7 @@ int x;
 for (x = 0; x < n; x++)
 {
 	printf("%i", a[x]);
-	if (a[x] != '\0')
+	if (x != n - 1)
 	{
 	printf(", ");
 	}
