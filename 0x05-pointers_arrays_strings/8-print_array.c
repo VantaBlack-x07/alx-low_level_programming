@@ -15,9 +15,7 @@ int x;
 
 for (x = 0; x < n; x++)
 {
-	_putchar(a[x] + 48);
-	_putchar(',');
-	_putchar(' ');
+	printf("%i, ", a[x]);
 }
 _putchar('\n');
 }
