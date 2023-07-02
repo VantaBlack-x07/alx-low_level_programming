@@ -17,7 +17,7 @@ char *dest_ptr = dest;
 int len = strlen(dest);
 int i;
 
-dest_ptr = dest;
+*dest_ptr = dest;
 for (i = 0; i <= n; i++)
 {
 	dest_ptr[i + n] = src[i];
