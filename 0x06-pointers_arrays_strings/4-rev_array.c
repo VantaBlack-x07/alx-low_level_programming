@@ -4,7 +4,7 @@
 * reverse_array - function that reverses
 * the content of an array of integers.
 *
-* @a: the string array
+* @a: the integer array
 * @n: the num of elements
 */
 
@@ -15,8 +15,7 @@ int x, temp;
 for (x = 0; x < n / 2; x++)
 {
 	temp = a[x];
-	a[x] = a[x - n - 1];
-	a[x - n - 1] = temp;
+	a[x] = a[n - x - 1];
+	a[n - x - 1] = temp;
 }
-_putchar('\n');
 }
