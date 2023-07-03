@@ -3,21 +3,43 @@
 /**
 * cap_string - function that capitalizes all words of a string.
 *
-* @a: the string
+* @str: the string
 *
 * Return: changed string
 */
 
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
-int i;
+	int i = 0;
 
-for (i = 0; a[i] != '\0'; i++)
-{
-	if (a[i] >= 'A' && a[i] <= 'Z' && a[i] <= 'a' && a[i] <= 'z')
+	while (str[i] != '\0')
 	{
-		a[i] = a[i] + ('a' - 'A');
+		if (i == 0
+		|| str[i - 1] == ' '
+		|| str[i - 1] == '\t'
+		|| str[i - 1] == '\n'
+		|| str[i - 1] == ','
+		|| str[i - 1] == ';'
+		|| str[i - 1] == '.'
+		|| str[i - 1] == '!'
+		|| str[i - 1] == '?'
+		|| str[i - 1] == '"'
+		|| str[i - 1] == '('
+		|| str[i - 1] == ')'
+		|| str[i - 1] == '{'
+		|| str[i - 1] == '}')
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] -= 32;
+			}
+		}
+
+		else if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
 	}
-}
-return (a);
+return (str);
 }
