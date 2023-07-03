@@ -5,6 +5,8 @@
 * letters of a string to uppercase.
 *
 * @a: the string
+*
+* Return: changed string
 */
 
 char *string_toupper(char *a)
