@@ -23,6 +23,10 @@ for (x = 0; s[x] != '\0'; x++)
 			break;
 		}
 	}
+	if (accept[y] == '\0')
+	{
+		break;
+	}
 }
 return (count);
 }
