@@ -25,7 +25,7 @@ char *leet(char *src)
 		{
 			if (src[i] >= 'a' && src[i] <= 'z')
 			{
-				src[i] = alphabets[src[i] - 97];
+				src[i] = lowercase_alphabets[src[i] - 97];
 				break;
 			}
 			src[i] = uppercase_alphabets[src[i] - 65];
