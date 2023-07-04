@@ -21,7 +21,7 @@ char *leet(char *src)
 	i = 0;
 	while (src[i] != '\0')
 	{
-		while (src[i] >= 'a' && src[i] <= 'z' || src[i] >= 'A' && src[i] <= 'Z')
+		while ((src[i] >= 'a' && src[i] <= 'z') || (src[i] >= 'A' && src[i] <= 'Z')
 		{
 			if (src[i] >= 'a' && src[i] <= 'z')
 			{
