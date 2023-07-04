@@ -22,6 +22,6 @@ for (i = 0; s[i] != '\0'; i++)
 		ptr = s[i];
 		break;
 	}
-return (ptr);
 }
+return (ptr);
 }
