@@ -19,7 +19,7 @@ for (i = 0; s[i] != '\0'; i++)
 {
 	if (s[i] == c)
 	{
-		ptr = s[i];
+		ptr = &s[i];
 		break;
 	}
 }
