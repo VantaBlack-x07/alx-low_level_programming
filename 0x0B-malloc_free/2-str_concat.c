@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	char **arr = malloc(strlen(s1) + strlen(s2) + 1);
+	char *arr = malloc(strlen(s1) + strlen(s2) + 1);
 	int len = strlen(s1) + strlen(s2) + 1;
 
 	if (arr == NULL)
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	strcpy(arr, s1);
 	strcat(arr, s2);
-	arr[len] = '\0';
+	arr[len - 1] = '\0';
 
 	return (arr);
 }
