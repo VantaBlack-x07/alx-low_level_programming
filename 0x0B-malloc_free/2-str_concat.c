@@ -10,13 +10,14 @@
 */
 char *str_concat(char *s1, char *s2)
 {
+	unsigned int len1 = (s1 != NULL) ? strlen(s1) : 0;
+	unsigned int len2 = (s2 != NULL) ? strlen(s2) : 0;
+	char *arr;
+
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 
-	unsigned int len1 = (s1 != NULL) ? strlen(s1) : 0;
-	unsigned int len2 = (s2 != NULL) ? strlen(s2) : 0;
-
-	char *arr = malloc(len1 + len2 + 1);
+	arr = malloc(len1 + len2 + 1);
 	if (arr == NULL)
 		return (NULL);
 
