@@ -16,7 +16,7 @@ if (array && size > 0 && cmp)
 {
 	for (int x = 0; x < (int)size; x++)
 	{
-		if (cmp[array[x]] != 0)
+		if (cmp(array[x]) != 0)
 		{
 			return (x);
 		}
