@@ -3,9 +3,7 @@
 #include <stdio.h>
 /**
  * print_all - function that prints anything.
- *
  * @format: a string of format
- *
  * Return: Nothing
  */
 void print_all(const char * const format, ...)
@@ -34,7 +32,9 @@ void print_all(const char * const format, ...)
 				if (s == NULL)
 					printf("(nil)");
 				else
+				{
 					printf("%s", s);
+				}
 				break;
 			case 'i':
 				i = va_arg(args, int);
