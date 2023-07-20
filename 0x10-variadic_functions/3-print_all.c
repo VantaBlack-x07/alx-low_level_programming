@@ -4,6 +4,7 @@
 
 /**
  * print_all - prints any combination of c, i, f, and s format specifiers
+ *
  * @format: a string of format specifiers
  *
  * Return: void
@@ -18,10 +19,6 @@ void print_all(const char * const format, ...)
 
 	while (format && format[i])
 	{
-		if (i > 0 && (format[i - 1] == 'c' || format[i - 1] == 'i'
-				|| format[i - 1] == 'f' || format[i - 1] == 's'))
-			printf(", ");
-
 		switch (format[i])
 		{
 			case 'c':
@@ -43,6 +40,11 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
+
+		if (format[i + 1] && (format[i] == 'c' || format[i] == 'i' ||
+			format[i] == 'f' || format[i] == 's'))
+			printf(", ");
+
 		i++;
 	}
 
