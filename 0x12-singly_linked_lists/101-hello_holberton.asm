@@ -1,5 +1,5 @@
 section .data
-    message db 'Hello, Holberton', 0Ah, 0
+    hello: db "Hello, Holberton", 10 ; 10 is newline character
 
 section .text
     global main
@@ -7,9 +7,13 @@ section .text
     extern printf
 
 main:
-    push message
-    call printf
-    add rsp, 8
+    push    rbp
+    mov     rbp, rsp
 
-    xor eax, eax
+    lea     rdi, [hello]
+    xor     eax, eax
+    call    printf
+
+    mov     rsp, rbp
+    pop     rbp
     ret

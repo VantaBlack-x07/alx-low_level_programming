@@ -7,7 +7,7 @@
 /**
  * add_node - function that adds a new node at
  * the beginning of a list_t list.
- * 
+ *
  * @head: pointer to the head of the list.
  * @str: string that will be stored in new node.
  *
@@ -22,19 +22,19 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	
+
 	new->str = strdup(str);
-	
+
 	if (!new->str)
 	{
 		free(new);
 		return (NULL);
 	}
-	
+
 	new->len = strlen(str);
-	
+
 	new->next = *head;
 	*head = new;
 
-	return(new);
+	return (new);
 }
