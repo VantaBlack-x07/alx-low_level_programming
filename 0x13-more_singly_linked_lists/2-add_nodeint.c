@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stddef.h>
 
-/*
+/**
  * add_nodeint - function that adds a new node
  * at the beginning of a listint_t list
  *
