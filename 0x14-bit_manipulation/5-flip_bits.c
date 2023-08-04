@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.c"
+#include "main.h"
 
 /**
  * flip_bits - function that returns the number of bits
