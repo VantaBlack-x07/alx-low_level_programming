@@ -4,7 +4,7 @@
  * insert_dnodeint_at_index - inserts a new node at a given position.
  *
  * @h: Head of the linked list.
- * @index: Index of the required node.
+ * @idx: Index of the required node.
  * @n: Value of the new node.
  *
  * Return: The address of the new node, or NULL if it failed
@@ -23,7 +23,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		new_node->prev = NULL;
 		new_node->next = *h;
-		
+
 		if (*h)
 		{
 			(*h)->prev = new_node;
