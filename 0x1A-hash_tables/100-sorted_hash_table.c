@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "hash_tables.h"
 
 /**
@@ -8,43 +5,46 @@
  *
  * @size: The size of the hash table
  *
- * Return: A pointer to the created hash table
+ * Return: A pointer to the created hash table, or NULL on failure
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *ht;
-	unsigned long int i;
+    shash_table_t *ht;
+    unsigned long int i;
 
-	ht = malloc(sizeof(shash_table_t));
-	if (ht == NULL)
-		return (NULL);
+    if (size == 0)
+        return (NULL);
 
-	ht->size = size;
-	ht->array = malloc(sizeof(shash_node_t *) * size);
-	if (ht->array == NULL)
-	{
-		free(ht);
-		return (NULL);
-	}
+    ht = malloc(sizeof(shash_table_t));
+    if (ht == NULL)
+        return (NULL);
 
-	for (i = 0; i < size; i++)
-		ht->array[i] = NULL;
+    ht->size = size;
+    ht->array = malloc(sizeof(shash_node_t *) * size);
+    if (ht->array == NULL)
+    {
+        free(ht);
+        return (NULL);
+    }
 
-	ht->shead = NULL;
-	ht->stail = NULL;
+    for (i = 0; i < size; i++)
+        ht->array[i] = NULL;
 
-	return (ht);
+    ht->shead = NULL;
+    ht->stail = NULL;
+
+    return (ht);
 }
 
 /**
  * shash_table_set - Inserts or updates a key pair
- * in a sorted hash table
+ * in a sorted shash table
  *
- * @ht: The hash table
+ * @ht: The shash table
  * @key: The key to insert or update
  * @value: The corresponding value
  *
- * Return: 1 on success, 0 on failure
+ * Return: 1 on succes, 0 on failure
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
@@ -107,13 +107,13 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * shash_table_get - Retrieves the value associated
- * with a key in a sorted hash table
+ * shash_table_get - Retrieves the value asociated
+ * with a key in a sorted shash table
  *
- * @ht: The hash table
+ * @ht: The shash table
  * @key: The key to search for
  *
- * Return: The value associated with the key, or NULL if not found
+ * Return: The value asociated with the key, or NULL if not found
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
@@ -138,9 +138,9 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 /**
  * shash_table_print - Prints the key/value pairs
- * in a sorted hash table
+ * in a sorted shash table
  *
- * @ht: The hash table to print
+ * @ht: The shash table to print
  */
 void shash_table_print(const shash_table_t *ht)
 {
@@ -167,9 +167,9 @@ void shash_table_print(const shash_table_t *ht)
 
 /**
  * shash_table_print_rev - Prints the key/value pairs
- * in a sorted hash table in reverse order
+ * in a sorted shash table in reverse order
  *
- * @ht: The hash table to print
+ * @ht: The shash table to print
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
@@ -195,9 +195,9 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * shash_table_delete - Deletes a sorted hash table and its elements
+ * shash_table_delete - Deletes a sorted shash table and its elements
  *
- * @ht: The hash table to delete.
+ * @ht: The shash table to delete.
  */
 void shash_table_delete(shash_table_t *ht)
 {
